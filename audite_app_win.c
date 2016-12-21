@@ -445,7 +445,7 @@ audite_app_window_class_init (AuditeAppWindowClass *class)
   G_OBJECT_CLASS (class)->constructor = audite_app_window_constructor;
 
   gtk_widget_class_set_template_from_resource (GTK_WIDGET_CLASS (class),
-                                               "/org/gtk/audite/window.ui");
+                                               "/com/github/alkesta/audite/window.ui");
 
   gtk_widget_class_bind_template_child (GTK_WIDGET_CLASS (class), AuditeAppWindow, gears);
   gtk_widget_class_bind_template_child (GTK_WIDGET_CLASS (class), AuditeAppWindow, volume_button);
@@ -504,7 +504,7 @@ void audite_app_window_open (AuditeAppWindow *win, gchar *uri) {
 	/* restore ui */
 	gtk_list_store_clear (GTK_LIST_STORE(win->chapter_list_store));
 	gtk_image_clear (GTK_IMAGE(win->cover_art_image));
-	gtk_label_set_text (GTK_LABEL (win->window_title_label), "Audiobook Player");
+	gtk_label_set_text (GTK_LABEL (win->window_title_label), "m4b Player");
 	gtk_label_set_text (GTK_LABEL (win->chapter_count_label), NULL);
 	gtk_progress_bar_set_fraction ( (GtkProgressBar *) (win->progress), 0);
 	win->audiobook = FALSE;
