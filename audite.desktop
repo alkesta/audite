@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=m4b Player
+Comment=Simple m4b Player
+Icon=audite
+StartupNotify=true
+Exec=audite
+Terminal=false
+
